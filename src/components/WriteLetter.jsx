@@ -240,9 +240,9 @@ export default function WriteLetter() {
   };
 
   if (loading) return <>
-  <div className="h-[30rem] flex items-center justify-center">
-  <div className="loader"></div>
-  </div>
+    <div className="h-[30rem] flex items-center justify-center">
+      <div className="loader"></div>
+    </div>
   </>;
   if (error)
     return <div className="text-center mt-10 text-red-500">{error}</div>;
@@ -255,31 +255,31 @@ export default function WriteLetter() {
 
       <div className="w-[95vw] max-w-[420px] mx-auto mt-6">
         <div
-          className="p-4 px-5 border-[2.5px] border-white rounded-[24px]"
-          style={{ backgroundColor: letterData.bgColor }}
+          className="py-4 px-5 border-[2.5px] border-white rounded-[24px] bg-[#f100db] flex flex-col gap-8 "
+          // style={{ backgroundColor: letterData.bgColor }}
           ref={textareaRef}
         >
-          <div className="rounded-[3rem] w-[100%]  px-6 py-3 flex items-center gap-12 mb-4 mx-auto">
-           <div className="rounded-[3rem] w-[50%] border-[2.5px] border-white px-6 py-3 flex items-center gap-3">
-           <div className="flex items-center gap-2 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-white"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="text-white font-bold font-beVietnam text-lg">
-                {letterData.receiverName}
-              </span>
+          <div className="rounded-[3rem] w-[100%]  px-6 flex items-center gap-12 mx-auto">
+            <div className="rounded-[3rem] w-[50%] border-[2.5px] border-white px-6 py-3 flex items-center gap-3">
+              <div className="flex items-center gap-2 rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <span className="text-white font-bold font-beVietnam text-lg">
+                  {letterData.receiverName}
+                </span>
+              </div>
             </div>
-           </div>
-           
+
             <img
               src={letterData.emoji}
               alt="emoji"
@@ -288,37 +288,40 @@ export default function WriteLetter() {
           </div>
 
 
-{/* /////////////////////////////////////////////////////////////// */}
+          {/* /////////////////////////////////////////////////////////////// */}
+        <div className=" flex justify-center">
+          <p className='text-center max-w-[350px] w-full text-white font-semibold text-[20px]'>
+            According to you which sweetest think about
+          </p>
+          </div>
 
-<p>
-  According to you which sweetest think about me 
-</p>
 
 
 
-
-{/* /.////////////////////////////// */}
+          {/* /.////////////////////////////// */}
           {/* ////////////////////////////////////////////////////////////////////////// */}
-          <div>
-          <div className="rounded-[3rem] w-[50%] border-[2.5px] border-white px-6 py-3 flex items-center gap-3">
-           <div className="flex items-center gap-2 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-white"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="text-white font-bold font-beVietnam text-lg">
-                {letterData.receiverName}
-              </span>
+          <div className="px-4">
+            <div className="rounded-[3rem] w-[50%] border-[2.5px] border-white px-6 py-3 flex items-center gap-3">
+              <div className="flex items-center gap-2 rounded-full ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                  
+                <span className="text-white font-bold font-beVietnam text-lg">
+                  You
+                </span>
+         
+              </div>
             </div>
-           </div>
           </div>
           {/* /////////////////////////////////////////////////////////////////// */}
           <div className={`bg-white rounded-xl p-6 relative ${continuousShake ? "animate-[gentleShake_0.8s_ease-in-out]" : ""}`}>
@@ -392,9 +395,8 @@ export default function WriteLetter() {
                     {firstHalf.map((message, index) => (
                       <SwiperSlide key={`top-${index}`}>
                         <div
-                          className={`bg-[#FF1493] font-beVietnam text-white px-4 py-3 rounded-[20px] text-center text-sm font-medium cursor-pointer transition-all duration-200 min-h-[80px] flex items-center justify-center ${
-                            selectedMessage === message ? 'border-[3px] border-white shadow-lg scale-[1.02]' : ''
-                          }`}
+                          className={`bg-[#FF1493] font-beVietnam text-white px-4 py-3 rounded-[20px] text-center text-sm font-medium cursor-pointer transition-all duration-200 min-h-[80px] flex items-center justify-center ${selectedMessage === message ? 'border-[3px] border-white shadow-lg scale-[1.02]' : ''
+                            }`}
                           style={{ backgroundColor: letterData.bgColor }}
                           onClick={() => handleMessageSelect(message)}
                         >
@@ -414,9 +416,8 @@ export default function WriteLetter() {
                     {secondHalf.map((message, index) => (
                       <SwiperSlide key={`bottom-${index}`}>
                         <div
-                          className={`bg-[#FF1493] font-beVietnam text-white px-4 py-3 rounded-[20px] text-center text-sm font-medium cursor-pointer transition-all duration-200 min-h-[80px] flex items-center justify-center ${
-                            selectedMessage === message ? 'border-[3px] border-white shadow-lg scale-[1.02]' : ''
-                          }`}
+                          className={`bg-[#FF1493] font-beVietnam text-white px-4 py-3 rounded-[20px] text-center text-sm font-medium cursor-pointer transition-all duration-200 min-h-[80px] flex items-center justify-center ${selectedMessage === message ? 'border-[3px] border-white shadow-lg scale-[1.02]' : ''
+                            }`}
                           style={{ backgroundColor: letterData.bgColor }}
                           onClick={() => handleMessageSelect(message)}
                         >
