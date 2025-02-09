@@ -27,9 +27,8 @@ const HomePage = () => {
         ref={inputRef}
       >
         <div
-          className={`relative flex justify-center w-[90vw] max-w-[360px] ${
-            isShaking ? "animate-[shake_0.5s_cubic-bezier(.36,.07,.19,.97)_both]" : ""
-          }`}
+          className={`relative flex justify-center w-[90vw] max-w-[360px] ${isShaking ? "animate-[shake_0.5s_cubic-bezier(.36,.07,.19,.97)_both]" : ""
+            }`}
         >
           <div className="absolute left-7 top-1/2 -translate-y-1/2 text-gray-400">
             <User fill="currentColor" size={20} />
@@ -47,11 +46,10 @@ const HomePage = () => {
         </div>
         {error ? (
           <p
-            className={`text-sm mt-1 text-red-500 font-beVietnam ${
-              isShaking
+            className={`text-sm mt-1 text-red-500 font-beVietnam ${isShaking
                 ? "animate-[shake_0.5s_cubic-bezier(.36,.07,.19,.97)_both]"
                 : ""
-            }`}
+              }`}
           >
             {error}
           </p>
@@ -61,7 +59,9 @@ const HomePage = () => {
           </p>
         )}
       </div>
-      <Letter name={name} onNameError={handleNameError} />
+      <div className="px-4">
+        <Letter name={name} onNameError={handleNameError} />
+      </div>
       <HowToUse />
       <div className="px-4">
         <ExampleLetters />

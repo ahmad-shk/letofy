@@ -206,6 +206,7 @@ export default function WriteLetter() {
           return;
         }
 
+        console.log('data--->', data)
         setLetterData(data);
       } catch (err) {
         console.error("Error fetching letter:", err);
@@ -256,7 +257,7 @@ export default function WriteLetter() {
       <div className="w-[95vw] max-w-[420px] mx-auto mt-6">
         <div
           className="py-4 px-5 border-[2.5px] border-white rounded-[24px] bg-[#f100db] flex flex-col gap-8 "
-          // style={{ backgroundColor: letterData.bgColor }}
+          style={{ backgroundColor: letterData.bgColor }}
           ref={textareaRef}
         >
           <div className="rounded-[3rem] w-[100%]  px-6 flex items-center gap-12 mx-auto">
@@ -281,7 +282,8 @@ export default function WriteLetter() {
             </div>
 
             <img
-              src={letterData.emoji}
+              // src={letterData.emoji}
+              src='/image_677.svg'
               alt="emoji"
               className="h-10 w-10 ml-auto"
             />
@@ -289,10 +291,10 @@ export default function WriteLetter() {
 
 
           {/* /////////////////////////////////////////////////////////////// */}
-        <div className=" flex justify-center">
-          <p className='text-center max-w-[350px] w-full text-white font-semibold text-[20px]'>
-            According to you which sweetest think about
-          </p>
+          <div className=" flex justify-center">
+            <p className='text-center max-w-[350px] w-full text-white font-semibold text-[20px]'>
+              According to you which is sweetest thing about me?
+            </p>
           </div>
 
 
@@ -315,11 +317,11 @@ export default function WriteLetter() {
                     clipRule="evenodd"
                   />
                 </svg>
-                  
+
                 <span className="text-white font-bold font-beVietnam text-lg">
                   You
                 </span>
-         
+
               </div>
             </div>
           </div>
@@ -337,23 +339,25 @@ export default function WriteLetter() {
             {!letterContent && (
               <div className="absolute inset-0 flex items-center justify-center p-6 pointer-events-none">
                 <p className="text-center font-semibold font-beVietnam text-lg text-gray-400">
-                  {letterData.letterDesc
-                    .replace(/\b(am I)\b/gi, `is ${letterData.receiverName}`)
-                    .replace(/\b(my|mine)\b/gi, `${letterData.receiverName}'s`)
-                    .replace(/\bwe\b/gi, `you and ${letterData.receiverName}`)
-                    .replace(/\b(me|I)\b/gi, letterData.receiverName)
-                    .split(new RegExp(`(${letterData.receiverName}(?:'s)?)`, 'g'))
-                    .map((part, index) => (
-                      <span
-                        key={index}
-                        className={part === letterData.receiverName || part === `${letterData.receiverName}'s`
-                          ? "text-[#9D00F7] font-bold"
-                          : ""
-                        }
-                      >
-                        {part}
-                      </span>
-                    ))}
+                  {
+                    // letterData.letterDesc
+                    "Type your answer or select from the texts given below"
+                      .replace(/\b(am I)\b/gi, `is ${letterData.receiverName}`)
+                      .replace(/\b(my|mine)\b/gi, `${letterData.receiverName}'s`)
+                      .replace(/\bwe\b/gi, `you and ${letterData.receiverName}`)
+                      .replace(/\b(me|I)\b/gi, letterData.receiverName)
+                      .split(new RegExp(`(${letterData.receiverName}(?:'s)?)`, 'g'))
+                      .map((part, index) => (
+                        <span
+                          key={index}
+                          className={part === letterData.receiverName || part === `${letterData.receiverName}'s`
+                            ? "text-[#9D00F7] font-bold"
+                            : ""
+                          }
+                        >
+                          {part}
+                        </span>
+                      ))}
                 </p>
               </div>
             )}
